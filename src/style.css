@@ -1,1 +1,65 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: green;
+}
+
+.card-container {
+  text-align: center;
+}
+
+#card {
+  width: 400px;
+  height: 800px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.top-suit,
+.bottom-suit {
+  font-size: 200px;
+  position: absolute;
+}
+
+#top-suit {
+  top: 10px;
+  left: 10px;
+}
+
+#bottom-suit {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(180deg);
+}
+
+.number {
+  font-size: 250px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 850px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
