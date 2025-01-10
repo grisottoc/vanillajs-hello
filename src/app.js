@@ -6,7 +6,6 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
- 
   const suits = ["♦", "♥", "♠", "♣"];
   const numbers = [
     "A",
@@ -24,18 +23,14 @@ window.onload = function() {
     "K"
   ];
 
-  
   const generateCard = () => {
-    
     const randomSuit = suits[Math.floor(Math.random() * suits.length)];
     const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
 
-    
     document.getElementById("top-suit").textContent = randomSuit;
     document.getElementById("bottom-suit").textContent = randomSuit;
     document.getElementById("number").textContent = randomNumber;
 
-    
     const isRed = randomSuit === "♦" || randomSuit === "♥";
     const color = isRed ? "red" : "black";
 
@@ -44,14 +39,11 @@ window.onload = function() {
     document.getElementById("number").style.color = color;
   };
 
-  
   document
     .getElementById("generate-btn")
     .addEventListener("click", generateCard);
 
-  
   generateCard();
 
-  
   setInterval(generateCard, 10000);
 };
